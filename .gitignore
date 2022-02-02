@@ -1,0 +1,3 @@
+*.code-workspace
+node_modules/**
+matter-js-0.18.0/**
