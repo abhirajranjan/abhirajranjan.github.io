@@ -1,0 +1,30 @@
+{
+  "name": "abhirajranjan.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass --watch scss -o css",
+    "build": "babel ./babel/script.js -d js",
+    "start": "npm run build && node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhirajranjan/abhirajranjan.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abhirajranjan/abhirajranjan.github.io/issues"
+  },
+  "homepage": "https://github.com/abhirajranjan/abhirajranjan.github.io#readme",
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "node-sass": "^7.0.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.8",
+    "@babel/core": "^7.16.12",
+    "@babel/preset-env": "^7.16.11"
+  }
+}
