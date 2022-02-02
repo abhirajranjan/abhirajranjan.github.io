@@ -21,9 +21,9 @@ function runMatter() {
       Bodies = Matter.Bodies; // create engine
 
   var engine = Engine.create();
-  engine.world.gravity.y = 0;
-  engine.world.gravity.x = 0;
-  engine.world.gravity.scale = 0.1; // create renderer
+  engine.world.gravity.y = 0.5;
+  engine.world.gravity.x = 0.5;
+  engine.world.gravity.scale = 0.3; // create renderer
 
   var render = Render.create({
     element: canvas,
@@ -70,7 +70,7 @@ function runMatter() {
     var body = Bodies.polygon(x, y, poligonNumber, s, {
       mass: s / 20,
       friction: 0,
-      frictionAir: 0.02,
+      frictionAir: 0.92,
       angle: Math.round(Math.random() * 360),
       render: {
         fillStyle: '#FFFFFF',
@@ -83,7 +83,7 @@ function runMatter() {
     var circle = Bodies.circle(x, y, Common.random(2, 8), {
       mass: 0.1,
       friction: 0,
-      frictionAir: 0.01,
+      frictionAir: 0.9,
       render: {
         fillStyle: r > 0.3 ? `#FF2D6A` : `rgb(240,240,240)`,
         strokeStyle: `#E9202E`,
@@ -94,7 +94,7 @@ function runMatter() {
     var circle = Bodies.circle(x, y, Common.random(2, 20), {
       mass: 6,
       friction: 0,
-      frictionAir: 0,
+      frictionAir: 0.83,
       render: {
         fillStyle: r > 0.3 ? `#4267F8` : `rgb(240,240,240)`,
         strokeStyle: `#3257E8`,

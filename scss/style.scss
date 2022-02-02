@@ -1,14 +1,12 @@
-
-@mixin transform($prop) {
-  background-color: #222222;
-  //-webkit-transform: $prop;
-  //-moz-transform: $prop;
-  //-ms-transform: $prop;
-  //-o-transform: $prop;
-  //transform: $prop;
+@mixin transform($prop){
+  -webkit-transform: $prop;
+  -moz-transform: $prop;
+  -ms-transform: $prop;
+  -o-transform: $prop;
+  transform: $prop;
 }
 
-body {
+body{
   padding: 0;
   margin: 0;
 }
@@ -19,7 +17,7 @@ body {
   width: 100%;
   height: 100%;
   background: #FFFFFF;
-}
+
 .more-pens{
   position: fixed;
   right: 20px;
@@ -27,11 +25,11 @@ body {
   z-index: 10;
   font-family: 'Catamaran', sans-serif;
   font-size: 12px;
-}
-a.white-mode {
+  }
+a.white-mode{
   &:link,
   &:visited,
-  &:active {
+  &:active{
     font-family: 'Catamaran', sans-serif;
     font-size: 12px;
     text-decoration: none;
@@ -41,18 +39,21 @@ a.white-mode {
     border-radius: 20px;
     margin: 0 4px;
   }
-  &--highlight{
+  &--highlight
     &:link,
     &:visited,
     &:active{
       background: #293FE9;
     }
-  }
+
+
   &:hover{
     background: #edf3f8;
     color: #212121;
   }
 }
+}
+
 
 body{
   margin: 0;
@@ -102,8 +103,6 @@ body{
   span{
     color: #EC456C;
   }
-}
-
 .button{
   &:link,
   &:visited,
@@ -127,4 +126,5 @@ body{
   text-decoration: none;
   box-shadow: 0 0 30px rgba(#90e5fb, 1);
   }
+}
 }
