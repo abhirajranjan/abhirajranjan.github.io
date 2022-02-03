@@ -35,7 +35,7 @@ function runMatter() {
       width: dimensions.width,
       height: dimensions.height,
       wireframes: false,
-      background: 'rgb(202,198,198)'
+      background: 'rgb(245, 245, 245)'
     }
   }); // create runner
 
@@ -48,23 +48,23 @@ function runMatter() {
 
   var attractiveBody = Bodies.circle(render.options.width / 2, render.options.height / 2, Math.max(dimensions.width / 4, dimensions.height / 4) / 2, {
     render: {
-      fillStyle: `rgb(202,198,198)`,
-      strokeStyle: `rgb(202,198,198)`,
+      fillStyle: `rgb(245, 245, 245)`,
+      strokeStyle: `rgb(245, 245, 245)`,
       lineWidth: 0
     },
     isStatic: true,
     plugin: {
       attractors: [function (bodyA, bodyB) {
         return {
-          x: (bodyA.position.x - bodyB.position.x) * 1e-6,
-          y: (bodyA.position.y - bodyB.position.y) * 1e-6
+          x: bodyA.position.x - bodyB.position.x <= dimensions.width / 2 ? (bodyA.position.x - bodyB.position.x) * 1e-6 : (bodyA.position.x - bodyB.position.x) * 1e-9,
+          y: bodyA.position.y - bodyB.position.y <= dimensions.height / 2 ? (bodyA.position.y - bodyB.position.y) * 1e-6 : (bodyA.position.y - bodyB.position.y) * 1e-9
         };
       }]
     }
   });
   World.add(world, attractiveBody); // add some bodies that to be attracted
 
-  for (var i = 0; i < 60; i += 1) {
+  for (var i = 0; i < 30; i += 1) {
     let x = Common.random(0, render.options.width);
     let y = Common.random(0, render.options.height);
     let s = Common.random() > 0.6 ? Common.random(10, 80) : Common.random(4, 60);
@@ -72,7 +72,7 @@ function runMatter() {
     var body = Bodies.polygon(x, y, poligonNumber, s, {
       mass: s / 20,
       friction: 0,
-      frictionAir: 0.72,
+      frictionAir: 0.70,
       angle: Math.round(Math.random() * 360),
       render: {
         fillStyle: '#FFFFFF',
@@ -81,35 +81,44 @@ function runMatter() {
       }
     });
     World.add(world, body);
+  }
+
+  for (var i = 0; i < 60; i += 1) {
+    let x = Common.random(0, render.options.width);
+    let y = Common.random(0, render.options.height);
+    let s = Common.random() > 0.6 ? Common.random(10, 80) : Common.random(4, 60); // pink circle
+
     let r = Common.random(0, 1);
     var circle = Bodies.circle(x, y, Common.random(2, 8), {
       mass: 0.1,
-      friction: 0,
-      frictionAir: 0.81,
+      friction: 0.4,
+      frictionAir: 0.87,
       render: {
-        fillStyle: r > 0.3 ? `#FF2D6A` : `rgb(202,198,198)`,
+        fillStyle: r > 0.3 ? `#FF2D6A` : `rgb(245, 245, 245)`,
         strokeStyle: `#E9202E`,
         lineWidth: 2
       }
     });
-    World.add(world, circle);
+    World.add(world, circle); // blue circle
+
     var circle = Bodies.circle(x, y, Common.random(2, 20), {
       mass: 6,
       friction: 0,
-      frictionAir: 7,
+      frictionAir: 0.7,
       render: {
-        fillStyle: r > 0.3 ? `#4267F8` : `rgb(202,198,198)`,
+        fillStyle: r > 0.3 ? `#4267F8` : `rgb(245, 245, 245)`,
         strokeStyle: `#3257E8`,
         lineWidth: 4
       }
     });
-    World.add(world, circle);
+    World.add(world, circle); // shell circle
+
     var circle = Bodies.circle(x, y, Common.random(2, 30), {
-      mass: 0.2,
+      mass: 0.6,
       friction: 0.6,
-      frictionAir: 0.8,
+      frictionAir: 0.6,
       render: {
-        fillStyle: `rgb(202,198,198)`,
+        fillStyle: `rgb(245, 245, 245)`,
         strokeStyle: `#FFFFFF`,
         lineWidth: 3
       }
