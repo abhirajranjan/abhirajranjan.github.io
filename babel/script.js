@@ -38,7 +38,7 @@ function runMatter(){
         width: dimensions.width,
         height: dimensions.height,
         wireframes: false,
-        background: 'rgb(245, 245, 245)'
+        background: 'rgb(225, 225, 225)'
       }
     });
 
@@ -59,8 +59,8 @@ function runMatter(){
       (Math.max(dimensions.width / 4, dimensions.height / 4)) / 2,
       {
         render: {
-          fillStyle: `rgb(245, 245, 245)`,
-          strokeStyle: `rgb(245, 245, 245)`,
+          fillStyle: `rgb(225, 225, 225)`,
+          strokeStyle: `rgb(225, 225, 225)`,
           lineWidth: 0
         },
         isStatic: true,
@@ -117,7 +117,7 @@ function runMatter(){
             friction: 0.4,
             frictionAir: 0.87,
             render: {
-              fillStyle: r > 0.3 ? `#FF2D6A` : `rgb(245, 245, 245)`,
+              fillStyle: r > 0.3 ? `#FF2D6A` : `rgb(225, 225, 225)`,
               strokeStyle: `#E9202E`,
               lineWidth: 2
             }
@@ -130,7 +130,7 @@ function runMatter(){
             friction: 0,
             frictionAir: 0.7,
             render: {
-              fillStyle: r > 0.3 ? `#4267F8` : `rgb(245, 245, 245)`,
+              fillStyle: r > 0.3 ? `#4267F8` : `rgb(225, 225, 225)`,
               strokeStyle: `#3257E8`,
               lineWidth: 4
             }
@@ -143,7 +143,7 @@ function runMatter(){
             friction: 0.6,
             frictionAir: 0.6,
             render: {
-              fillStyle: `rgb(245, 245, 245)`,
+              fillStyle: `rgb(225, 225, 225)`,
               strokeStyle: `#FFFFFF`,
               lineWidth: 3}
           });
