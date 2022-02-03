@@ -92,7 +92,7 @@ function runMatter(){
         {
           mass: s / 20,
           friction: 0,
-          frictionAir: 0.02,
+          frictionAir: 0.72,
           angle: Math.round(Math.random() * 360),
           render: {
             fillStyle: '#FFFFFF',
@@ -109,7 +109,7 @@ function runMatter(){
       var circle = Bodies.circle(x, y, Common.random(2, 8), {
             mass: 0.1,
             friction: 0,
-            frictionAir: 0.01,
+            frictionAir: 0.81,
             render: {
               fillStyle: r > 0.3 ? `#FF2D6A` : `rgb(202,198,198)`,
               strokeStyle: `#E9202E`,
@@ -121,7 +121,7 @@ function runMatter(){
       var circle = Bodies.circle(x, y, Common.random(2, 20), {
             mass: 6,
             friction: 0,
-            frictionAir: 0,
+            frictionAir: 7,
             render: {
               fillStyle: r > 0.3 ? `#4267F8` : `rgb(202,198,198)`,
               strokeStyle: `#3257E8`,
