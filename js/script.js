@@ -35,7 +35,7 @@ function runMatter() {
       width: dimensions.width,
       height: dimensions.height,
       wireframes: false,
-      background: 'rgb(225, 225, 225)'
+      background: 'rgb(220, 220, 220)'
     }
   }); // create runner
 
@@ -48,7 +48,7 @@ function runMatter() {
 
   var attractiveBody = Bodies.circle(render.options.width / 2, render.options.height / 2, Math.max(dimensions.width / 4, dimensions.height / 4) / 2, {
     render: {
-      fillStyle: `rgb(225, 225, 225)`,
+      fillStyle: `rgb(220, 220, 220)`,
       strokeStyle: `rgb(225, 225, 225)`,
       lineWidth: 0
     },
@@ -94,7 +94,7 @@ function runMatter() {
       friction: 0.4,
       frictionAir: 0.87,
       render: {
-        fillStyle: r > 0.3 ? `#FF2D6A` : `rgb(225, 225, 225)`,
+        fillStyle: r > 0.3 ? `#FF2D6A` : `rgb(220, 220, 220)`,
         strokeStyle: `#E9202E`,
         lineWidth: 2
       }
@@ -106,7 +106,7 @@ function runMatter() {
       friction: 0,
       frictionAir: 0.7,
       render: {
-        fillStyle: r > 0.3 ? `#4267F8` : `rgb(225, 225, 225)`,
+        fillStyle: r > 0.3 ? `#4267F8` : `rgb(220, 220, 220)`,
         strokeStyle: `#3257E8`,
         lineWidth: 4
       }
@@ -118,7 +118,7 @@ function runMatter() {
       friction: 0.6,
       frictionAir: 0.6,
       render: {
-        fillStyle: `rgb(225, 225, 225)`,
+        fillStyle: `rgb(220, 220, 220)`,
         strokeStyle: `#FFFFFF`,
         lineWidth: 3
       }
