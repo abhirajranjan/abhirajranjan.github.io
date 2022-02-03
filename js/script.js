@@ -1,3 +1,5 @@
+"use strict";
+
 var canvas = $("#wrapper-canvas").get(0);
 var dimensions = {
   width: $(window).width(),
@@ -21,9 +23,9 @@ function runMatter() {
       Bodies = Matter.Bodies; // create engine
 
   var engine = Engine.create();
-  engine.world.gravity.y = 0.5;
-  engine.world.gravity.x = 0.5;
-  engine.world.gravity.scale = 0.3; // create renderer
+  engine.world.gravity.y = 0;
+  engine.world.gravity.x = 0;
+  engine.world.gravity.scale = 0.1; // create renderer
 
   var render = Render.create({
     element: canvas,
@@ -33,7 +35,7 @@ function runMatter() {
       width: dimensions.width,
       height: dimensions.height,
       wireframes: false,
-      background: 'rgb(240,240,240)'
+      background: 'rgb(202,198,198)'
     }
   }); // create runner
 
@@ -46,8 +48,8 @@ function runMatter() {
 
   var attractiveBody = Bodies.circle(render.options.width / 2, render.options.height / 2, Math.max(dimensions.width / 4, dimensions.height / 4) / 2, {
     render: {
-      fillStyle: `rgb(240,240,240)`,
-      strokeStyle: `rgb(240,240,240)`,
+      fillStyle: `rgb(202,198,198)`,
+      strokeStyle: `rgb(202,198,198)`,
       lineWidth: 0
     },
     isStatic: true,
@@ -70,7 +72,7 @@ function runMatter() {
     var body = Bodies.polygon(x, y, poligonNumber, s, {
       mass: s / 20,
       friction: 0,
-      frictionAir: 0.92,
+      frictionAir: 0.02,
       angle: Math.round(Math.random() * 360),
       render: {
         fillStyle: '#FFFFFF',
@@ -83,9 +85,9 @@ function runMatter() {
     var circle = Bodies.circle(x, y, Common.random(2, 8), {
       mass: 0.1,
       friction: 0,
-      frictionAir: 0.9,
+      frictionAir: 0.01,
       render: {
-        fillStyle: r > 0.3 ? `#FF2D6A` : `rgb(240,240,240)`,
+        fillStyle: r > 0.3 ? `#FF2D6A` : `rgb(202,198,198)`,
         strokeStyle: `#E9202E`,
         lineWidth: 2
       }
@@ -94,9 +96,9 @@ function runMatter() {
     var circle = Bodies.circle(x, y, Common.random(2, 20), {
       mass: 6,
       friction: 0,
-      frictionAir: 0.83,
+      frictionAir: 0,
       render: {
-        fillStyle: r > 0.3 ? `#4267F8` : `rgb(240,240,240)`,
+        fillStyle: r > 0.3 ? `#4267F8` : `rgb(202,198,198)`,
         strokeStyle: `#3257E8`,
         lineWidth: 4
       }
@@ -107,7 +109,7 @@ function runMatter() {
       friction: 0.6,
       frictionAir: 0.8,
       render: {
-        fillStyle: `rgb(240,240,240)`,
+        fillStyle: `rgb(202,198,198)`,
         strokeStyle: `#FFFFFF`,
         lineWidth: 3
       }
