@@ -113,9 +113,9 @@ function runMatter(){
       // pink circle
       let r = Common.random(0,1)
       var circle = Bodies.circle(x, y, Common.random(2, 8), {
-            mass: 0.1,
-            friction: 0.4,
-            frictionAir: 0.87,
+            mass: 0.3,
+            friction: 0.7,
+            frictionAir: 0.77,
             render: {
               fillStyle: r > 0.3 ? `#FF2D6A` : `rgb(225, 225, 225)`,
               strokeStyle: `#E9202E`,
@@ -127,7 +127,7 @@ function runMatter(){
       // blue circle
       var circle = Bodies.circle(x, y, Common.random(2, 20), {
             mass: 6,
-            friction: 0,
+            friction: 0.5,
             frictionAir: 0.7,
             render: {
               fillStyle: r > 0.3 ? `#4267F8` : `rgb(225, 225, 225)`,
@@ -139,9 +139,9 @@ function runMatter(){
       
       // shell circle
       var circle = Bodies.circle(x, y, Common.random(2, 30), {
-            mass: 0.6,
+            mass: 1,
             friction: 0.6,
-            frictionAir: 0.6,
+            frictionAir: 0.7,
             render: {
               fillStyle: `rgb(225, 225, 225)`,
               strokeStyle: `#FFFFFF`,
