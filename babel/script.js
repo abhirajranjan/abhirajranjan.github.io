@@ -36,7 +36,7 @@ function runMatter(){
       options: {
         showVelocity: false,
         width: dimensions.width,
-        height: dimensions.height,
+        height: dimensions.height*3,
         wireframes: false,
         background: 'rgb(225, 225, 225)'
       }
@@ -156,10 +156,10 @@ function runMatter(){
     Events.on(engine, 'afterUpdate', function() {
         if (!mouse.position.x) return;
         // smoothly move the attractor body towards the mouse
-        Body.translate(attractiveBody, {
-            x: (mouse.position.x - attractiveBody.position.x) * 0.12,
-            y: (mouse.position.y - attractiveBody.position.y) * 0.12
-        });
+        //Body.translate(attractiveBody, {
+          //  x: (mouse.position.x - attractiveBody.position.x) * 0.12,
+            //y: (mouse.position.y - attractiveBody.position.y) * 0.12
+        //});
     });
 
 

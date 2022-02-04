@@ -33,9 +33,9 @@ function runMatter() {
     options: {
       showVelocity: false,
       width: dimensions.width,
-      height: dimensions.height,
+      height: dimensions.height * 3,
       wireframes: false,
-      background: 'rgb(220, 220, 220)'
+      background: 'rgb(225, 225, 225)'
     }
   }); // create runner
 
@@ -48,7 +48,7 @@ function runMatter() {
 
   var attractiveBody = Bodies.circle(render.options.width / 2, render.options.height / 2, Math.max(dimensions.width / 4, dimensions.height / 4) / 2, {
     render: {
-      fillStyle: `rgb(220, 220, 220)`,
+      fillStyle: `rgb(225, 225, 225)`,
       strokeStyle: `rgb(225, 225, 225)`,
       lineWidth: 0
     },
@@ -94,7 +94,7 @@ function runMatter() {
       friction: 0.4,
       frictionAir: 0.87,
       render: {
-        fillStyle: r > 0.3 ? `#FF2D6A` : `rgb(220, 220, 220)`,
+        fillStyle: r > 0.3 ? `#FF2D6A` : `rgb(225, 225, 225)`,
         strokeStyle: `#E9202E`,
         lineWidth: 2
       }
@@ -106,7 +106,7 @@ function runMatter() {
       friction: 0,
       frictionAir: 0.7,
       render: {
-        fillStyle: r > 0.3 ? `#4267F8` : `rgb(220, 220, 220)`,
+        fillStyle: r > 0.3 ? `#4267F8` : `rgb(225, 225, 225)`,
         strokeStyle: `#3257E8`,
         lineWidth: 4
       }
@@ -118,7 +118,7 @@ function runMatter() {
       friction: 0.6,
       frictionAir: 0.6,
       render: {
-        fillStyle: `rgb(220, 220, 220)`,
+        fillStyle: `rgb(225, 225, 225)`,
         strokeStyle: `#FFFFFF`,
         lineWidth: 3
       }
@@ -130,11 +130,10 @@ function runMatter() {
   var mouse = Mouse.create(render.canvas);
   Events.on(engine, 'afterUpdate', function () {
     if (!mouse.position.x) return; // smoothly move the attractor body towards the mouse
-
-    Body.translate(attractiveBody, {
-      x: (mouse.position.x - attractiveBody.position.x) * 0.12,
-      y: (mouse.position.y - attractiveBody.position.y) * 0.12
-    });
+    //Body.translate(attractiveBody, {
+    //  x: (mouse.position.x - attractiveBody.position.x) * 0.12,
+    //y: (mouse.position.y - attractiveBody.position.y) * 0.12
+    //});
   }); // return a context for MatterDemo to control
 
   let data = {
