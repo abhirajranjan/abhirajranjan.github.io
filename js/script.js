@@ -71,7 +71,7 @@ function runMatter() {
     let poligonNumber = Common.random(3, 6);
     var body = Bodies.polygon(x, y, poligonNumber, s, {
       mass: s / 20,
-      friction: 0,
+      friction: 0.3,
       frictionAir: 0.70,
       angle: Math.round(Math.random() * 360),
       render: {
