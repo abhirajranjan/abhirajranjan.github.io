@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass --watch scss -o css",
-    "build": "babel ./babel/script.js -d js",
+    "sass": "node-sass --watch ./src/scss/ -o ./static/css/",
+    "babel": "babel ./src/babel/mattermotion.js -d ./static/js/",
     "start": "npm run build && node dist/index.js"
   },
   "repository": {
