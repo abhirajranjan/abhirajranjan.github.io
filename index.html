@@ -1,18 +1,20 @@
 <html>
 	<head>
-
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.2/tailwind.min.css">
-
 	<!--
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.2/tailwind.min.css">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.1/dist/locomotive-scroll.min.css">
-	 	<link rel="stylesheet" href="./static/css/tailwind.css">
+
+	-->
 		<link rel="stylesheet" href="./static/css/locomotive-scroll.css">
-	 -->
+	 	<link rel="stylesheet" href="./static/css/tailwind.css">
+	 
 		<link rel="stylesheet" href="./static/css/style.css">
 	</head>
 
 	<body>
-			<div id="wrapper-canvas" data-scroll-container>
+		<div data-scroll-container>
+			<section id="intro" class="h-screen flex items-center justify-center text-center bg-green-200" data-scroll-section>
+			  <div id="wrapper-canvas" data-scroll-container>
 				<div class="content flex md:flex-row-reverse flex-wrap -mx-2">
 					<div class="w-full md:w-1/2 bg-gray-500">
 						<div class='text-right text-gray-200 p-2'>
@@ -32,8 +34,24 @@
 						</div>
 					</div>
 				</div>
-			</div>	
-		
+			</div>
+
+			</section>
+
+			<section id="about-section" class="py-40 bg-green-50" data-scroll-section>
+				<div class=" px-5 mx-auto" data-scroll data-scroll-call="ggs" data-scroll-repeat>
+				  <div id="about" class="lg:grid grid-cols-2 gap-4 items-start">
+					<h2 class="text-5xl font-extrabold text-gray-500" data-scroll data-scroll-sticky data-scroll-target="#about">About</h2>
+					<div class="text-xl pt-4 lg:pt-0 text-gray-200">
+					  <p class="mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pretium, ante sed lacinia ultricies, sapien massa ultricies erat, eu tristique justo est ut tortor. In nibh est, porttitor vulputate erat et, faucibus volutpat felis. Curabitur eleifend nisi quis consectetur euismod. Morbi ac condimentum ante. Aliquam euismod sodales arcu et iaculis. Cras porttitor nisl felis, eget interdum magna cursus et. Curabitur vehicula dignissim ornare.</p>
+					  <p class="mb-8">Cras lacinia sit amet justo ut maximus. Integer sapien felis, gravida a commodo et, porttitor non libero. Maecenas lacinia accumsan eros eu dapibus. Mauris dolor odio, vulputate vitae purus vitae, tincidunt egestas orci. Maecenas sollicitudin fringilla justo, id tempus metus elementum sit amet. Nullam vestibulum mauris vitae condimentum sagittis. Suspendisse sed purus vel neque ullamcorper ornare egestas vel ligula. Duis ac mattis odio. Aliquam sodales turpis nec diam maximus, nec fermentum massa mollis.</p>
+					  <p class="mb-8">Praesent finibus egestas velit, vitae tristique leo luctus sit amet. Vivamus eu facilisis neque, a venenatis mi. Vestibulum ultricies venenatis arcu sit amet fringilla. Curabitur non tincidunt sem. Sed quis quam ut nulla tincidunt dapibus quis ac lorem. Nulla lobortis ac metus ut molestie.</p>
+					</div>
+				  </div>
+				</div>
+			  </section>
+		</div>
+
 		<!-- <section id="about-me-section" data-scroll-section>
 			<div class="bg-gray-900">
 				<div id="about-me" class="md:flex flex flex-wrap items-start w-full">
@@ -71,20 +89,22 @@
 		</div>
 		-->
 	
-
+	<!--
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.12.0/matter.min.js'></script>
 		<script src='https://cdn.jsdelivr.net/npm/matter-wrap@0.2.0/build/matter-wrap.min.js'></script>
 		<script src='https://cdn.jsdelivr.net/npm/matter-attractors@0.1.6/build/matter-attractors.min.js'></script>
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
 		<script src='https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.1/dist/locomotive-scroll.min.js'></script>
-		<script src='./static/js/mattermotion.js' ></script>
-		<!--
+	-->
+		
+		
 		<script src='./static/js/matter.min.js'></script>
 		<script src='./static/js/matter-wrap.min.js'></script>
 		<script src='./static/js/matter-attractors.min.js'></script>
 		<script src='./static/js/jquery.min.js'></script>
 		<script src='./static/js/locomotive-scroll.min.js'></script>
-		<script src='./static/js/matterbg.js' ></script>
-		<script src='./static/js/locomotivecall.js'></script> -->
+		
+		<script src='./static/js/mattermotion.js' ></script>
+		<script src='./static/js/locomotivecall.js'></script>
 	</body>
 </html>

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "sass": "node-sass --watch ./src/scss/ -o ./static/css/",
-    "babel": "babel ./src/babel/mattermotion.js -d ./static/js/",
+    "babel": "babel ./src/babel/locomotivecall.js -d ./static/js/",
     "start": "npm run build && node dist/index.js"
   },
   "repository": {

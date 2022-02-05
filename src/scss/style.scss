@@ -5,6 +5,20 @@
   -o-transform: $prop;
   transform: $prop;
 }
+.canvas-enter-coloranim{
+animation: canvas-enter-color-key 1s 0s;
+animation-fill-mode: forwards;
+}
+
+@keyframes canvas-enter-color-key {
+  from {background-color: rgb(225, 225, 225);}
+  to {background-color: rgb(9, 16, 29);}
+}
+
+@keyframes canvas-exit-color-key {
+  from {background-color:  rgb(9, 16, 29);}
+  to {background-color: rgb(225, 225, 225);}
+}
 
 body{
   padding: 0;
