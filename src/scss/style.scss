@@ -5,22 +5,9 @@
   -o-transform: $prop;
   transform: $prop;
 }
-.canvas-enter-coloranim{
-animation: canvas-enter-color-key 1s 0s;
-animation-fill-mode: forwards;
-}
-
-@keyframes canvas-enter-color-key {
-  from {background-color: rgb(225, 225, 225);}
-  to {background-color: rgb(9, 16, 29);}
-}
-
-@keyframes canvas-exit-color-key {
-  from {background-color:  rgb(9, 16, 29);}
-  to {background-color: rgb(225, 225, 225);}
-}
 
 body{
+  background: #121212;
   padding: 0;
   margin: 0;
 }
@@ -30,18 +17,10 @@ body{
   display: block;
   width: 100%;
   height: 100%;
-  background: #FFFFFF;
   overflow: hidden;
   position: absolute;
   top:0;
   left:0;
-}
-
-canvas{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    //z-index: -100;
 }
 
 @mixin block-page(){
@@ -109,7 +88,7 @@ body{
   font-size: 70px;
   line-height: 1;
   margin-top: 14px;
-  color: #212121;
+  color: #ffffff;
   display: block;
   pointer-events: none;
 
@@ -124,7 +103,7 @@ body{
   font-size: 24px;
   line-height: 1;
   margin-top: 0;
-  color: #212121;
+  color: #bb86fc;
   display: block;
   pointer-events: none;
 
