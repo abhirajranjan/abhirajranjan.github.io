@@ -25,7 +25,7 @@ nav{
     padding: .5em;
     display: flex;
     position: relative;
-    height: 3em;
+    height: 5em;
     background-color: var(--mobile_nav-block-bg-color);
     align-items: center;
     justify-content: space-between;
@@ -103,6 +103,7 @@ nav{
     transform: translateY(-50%) translateX(-50%);
     background: linear-gradient(45deg, #f36100, #884985, #7c1212);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     text-transform: uppercase;
     }
@@ -115,6 +116,8 @@ nav{
 }
 
 div.about{
+    margin-top: 4em;
+    margin-bottom: 4em;
     display: flex;
     flex-direction: column;
     padding-left: 1em;
@@ -141,18 +144,20 @@ div.about{
             display:flex;
             width: 50%;
             margin-top: 3em;
-            padding: 0.5em;
             height: 10em;
             flex-direction: column;
             background-color: #121212;
+            justify-content: center;
             //background-color: #3b454e;
             //background-image: linear-gradient(315deg, #434c55 0%, #28313b 74%);
-        
+
             .card-text{
+                padding: 0.5em;
                 color: #e7e5e5;
             }
 
             .card-subtitle{
+                text-align: center;
                 color: #c4c4c4;
             }
         }
@@ -160,13 +165,116 @@ div.about{
 }
 
 .techstacks{
-    margin: 5em;
+    margin: 4em 2em 4em 2em;
     display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
     flex-direction: row;
     justify-content: space-around;
 
     svg{
-        margin:0.5em;
-        height: 2em;
+        height: 3em;
+    }
+}
+
+.projects{
+    margin-top: 4em;
+    margin-bottom: 4em;
+
+    .heading{
+        padding-bottom: 1em;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+    }
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        gap: 6em;
+
+        .project-card{
+            margin-left:1em;
+            margin-right: 1em;
+            padding: 2em;
+            display: flex;
+            flex-direction: column;
+
+            img{
+                width: 100%;
+                height: 10em;
+                object-position:70% 70%;
+                object-fit:cover;
+            }
+            .title{
+                text-align: left;
+                font-size: 1.5rem;
+                padding: .5em 0 .5em 0;
+            }
+            .desc{
+                font-size: 1rem;
+            }   
+        }    
+    }
+}
+
+.contact{
+    display: flex;
+
+    .bg{
+        height: 15em;
+        width: 100%;
+        position: absolute;
+        z-index: 0;
+        background-color: #141414;
+    }
+    .textarea{
+        display: flex;
+        flex-direction: column;
+        z-index: 1;
+        width: 100%;
+        height: 15em;
+        position: relative;
+        justify-content: space-evenly;
+        
+        .heading{
+            //padding: 1em;
+            text-align: center;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+        }
+        .field{
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+            width: 100%;
+            position: relative;
+            justify-content: center;
+
+            .subfield{
+                align-items: center;
+                justify-content: center;
+                //padding: 1em;
+                display: flex;
+                flex-direction: row;
+                gap: 1em;
+                font-size: 1rem;
+
+                .entry{
+                    text-transform: uppercase;
+                }
+            }
+        }
+        .logobtn{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            //flex-wrap: wrap;
+            justify-content: space-evenly;
+
+            svg{
+                height: 2em;
+            }
+        }
     }
 }
