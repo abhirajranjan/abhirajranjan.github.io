@@ -10,7 +10,9 @@
   --nav-btn-bg: rgb(145, 145, 145);
   --size-index: calc(1vw + 1vh); }
 
-body {
+html, body {
+  height: 100%;
+  width: 100%;
   margin: 0em;
   background-color: var(--bg-color);
   color: white;
@@ -58,7 +60,7 @@ nav {
   height: 100%;
   position: absolute;
   object-fit: cover;
-  z-index: -1; }
+  z-index: 0; }
 
 /* Just styling the content of the div, the *magic* in the previous rules */
 .hero .intro-title {
