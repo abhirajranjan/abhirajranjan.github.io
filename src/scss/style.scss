@@ -280,3 +280,69 @@ nav{
         }
     }
 }
+
+// medium devices, tablets
+@media (min-width: 768px) {
+    nav{
+        svg{
+            display: none;
+        }
+        .right{
+            display:inline;
+            position: relative;
+            height: unset;
+            width: unset;
+            right: unset;
+            top: unset;
+            transform: unset;
+            padding-right: 1em;
+            gap: 1em;
+
+            ul{
+                display: flex;
+                text-decoration: none;
+                list-style-type: none;
+
+                li{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .projects{
+        .content{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 6em;
+            width: 100%;
+    
+            .project-card{
+                position: relative;
+                margin-left: 1em;
+                margin-right: 1em;
+                padding: 2em;
+                display: block;
+                height: 100%;
+    
+                img{
+                    left:0;
+                    z-index: -1;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    object-position:70% 70%;
+                    object-fit:cover;
+                }
+                .title{
+                    z-index: 1;
+                    background: transparent;
+                    text-align: center;
+                    padding: .5em 0 .5em 0;
+                }
+                
+            }    
+        }
+    }
+}
