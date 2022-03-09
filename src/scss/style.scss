@@ -98,7 +98,7 @@ nav{
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
     line-height: 1.7;
-    font-size: calc(var(--size-index) * 3.6);
+    font-size: calc(var(--size-index) * 2.6);
     font-weight: 900;
     top:50%;
     left:50%;
@@ -288,9 +288,9 @@ nav{
             display: none;
         }
         .right{
-            display:inline;
+            display: inline;
             position: relative;
-            height: unset;
+            height: min-content;
             width: unset;
             right: unset;
             top: unset;
@@ -334,6 +334,7 @@ nav{
                     height: 100%;
                     object-position:70% 70%;
                     object-fit:cover;
+                    filter: brightness(0.3) grayscale(50%);
                 }
                 .title{
                     z-index: 1;
@@ -341,7 +342,6 @@ nav{
                     text-align: center;
                     padding: .5em 0 .5em 0;
                 }
-                
             }    
         }
     }
