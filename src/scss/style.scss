@@ -27,7 +27,7 @@ nav{
     padding: .5em;
     display: flex;
     position: relative;
-    height: 5em;
+    height: 3em;
     background-color: var(--mobile_nav-block-bg-color);
     align-items: center;
     justify-content: space-between;
@@ -117,14 +117,18 @@ nav{
     }
 }
 
-div.about{
-    margin-top: 4em;
-    margin-bottom: 4em;
+.about, .cards, .techstacks, .projects, .contact{
+    margin-top: 6em;
+}
+
+.about{
     display: flex;
     flex-direction: column;
     padding-left: 1em;
     padding-right: 1em;
     text-align: center;
+    justify-content: center;
+    
 
     .textarea{
         display: flex;
@@ -133,41 +137,45 @@ div.about{
         justify-content: center;
 
     }
+}
 
-    .title{
-        display: flex;
-        flex-direction: row;
-        gap: .5em;
+.title{
+    display: flex;
+    flex-direction: row;
+    gap: .5em;
 
-        align-items: center;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+
+    .card{
+        display:flex;
+        width: 50%;
+        height: 100%;
+        margin-top: 3em;
+        padding: 0.5em;
+        //height: 10em;
+        flex-direction: column;
+        background-color: #121212;
         justify-content: center;
+        //background-color: #3b454e;
+        //background-image: linear-gradient(315deg, #434c55 0%, #28313b 74%);
 
-        .card{
-            display:flex;
-            width: 50%;
-            margin-top: 3em;
-            height: 10em;
-            flex-direction: column;
-            background-color: #121212;
-            justify-content: center;
-            //background-color: #3b454e;
-            //background-image: linear-gradient(315deg, #434c55 0%, #28313b 74%);
+        .card-text{
+            text-align: center;
+            padding-bottom: 0.5em;
+            color: #e7e5e5;
+        }
 
-            .card-text{
-                padding: 0.5em;
-                color: #e7e5e5;
-            }
-
-            .card-subtitle{
-                text-align: center;
-                color: #c4c4c4;
-            }
+        .card-subtitle{
+            text-align: center;
+            color: #c4c4c4;
         }
     }
 }
 
+
 .techstacks{
-    margin: 4em 2em 4em 2em;
     display: flex;
     flex-wrap: wrap;
     gap: 2em;
@@ -175,22 +183,19 @@ div.about{
     justify-content: space-around;
 
     svg{
-        height: 3em;
+        height: 2em;
     }
 }
 
 .projects{
-    margin-top: 4em;
-    margin-bottom: 4em;
-
     .heading{
         padding-bottom: 1em;
         text-align: center;
         text-transform: uppercase;
-        font-size: 1.5rem;
     }
 
     .content{
+        text-align: center;
         display: flex;
         flex-direction: column;
         gap: 6em;
@@ -209,13 +214,9 @@ div.about{
                 object-fit:cover;
             }
             .title{
-                text-align: left;
-                font-size: 1.5rem;
+                text-align: center;
                 padding: .5em 0 .5em 0;
             }
-            .desc{
-                font-size: 1rem;
-            }   
         }    
     }
 }
@@ -242,7 +243,6 @@ div.about{
         .heading{
             //padding: 1em;
             text-align: center;
-            font-size: 1.5rem;
             text-transform: uppercase;
         }
         .field{
