@@ -1,2 +1,2 @@
 # portfolio site
-more active developement [here](https://codepen.io/Abhirajranjan/pen/LYOQvJb)
+portfolio site designed using (not so clean) scss and html5.
