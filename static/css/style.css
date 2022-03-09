@@ -22,7 +22,7 @@ nav {
   padding: .5em;
   display: flex;
   position: relative;
-  height: 5em;
+  height: 2em;
   background-color: var(--mobile_nav-block-bg-color);
   align-items: center;
   justify-content: space-between;
@@ -92,79 +92,79 @@ nav {
   .svg-bg path {
     fill: var(--bg-color); }
 
-div.about {
-  margin-top: 4em;
-  margin-bottom: 4em;
+.about, .cards, .techstacks, .projects, .contact {
+  margin-top: 6em; }
+
+.about {
   display: flex;
   flex-direction: column;
   padding-left: 1em;
   padding-right: 1em;
-  text-align: center; }
-  div.about .textarea {
+  text-align: center;
+  justify-content: center; }
+  .about .textarea {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center; }
-  div.about .title {
+
+.title {
+  display: flex;
+  flex-direction: row;
+  gap: .5em;
+  align-items: center;
+  justify-content: center;
+  height: auto; }
+  .title .card {
     display: flex;
-    flex-direction: row;
-    gap: .5em;
-    align-items: center;
+    width: 50%;
+    height: 100%;
+    margin-top: 3em;
+    padding: 0.5em;
+    flex-direction: column;
+    background-color: #121212;
     justify-content: center; }
-    div.about .title .card {
-      display: flex;
-      width: 50%;
-      margin-top: 3em;
-      height: 10em;
-      flex-direction: column;
-      background-color: #121212;
-      justify-content: center; }
-      div.about .title .card .card-text {
-        padding: 0.5em;
-        color: #e7e5e5; }
-      div.about .title .card .card-subtitle {
-        text-align: center;
-        color: #c4c4c4; }
+    .title .card .card-text {
+      text-align: center;
+      padding-bottom: 0.5em;
+      color: #e7e5e5; }
+    .title .card .card-subtitle {
+      text-align: center;
+      color: #c4c4c4; }
 
 .techstacks {
-  margin: 4em 2em 4em 2em;
   display: flex;
   flex-wrap: wrap;
   gap: 2em;
   flex-direction: row;
   justify-content: space-around; }
   .techstacks svg {
-    height: 3em; }
+    height: 2em; }
 
-.projects {
-  margin-top: 4em;
-  margin-bottom: 4em; }
-  .projects .heading {
-    padding-bottom: 1em;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 1.5rem; }
-  .projects .content {
+.projects .heading {
+  padding-bottom: 1em;
+  text-align: center;
+  text-transform: uppercase; }
+
+.projects .content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 6em; }
+  .projects .content .project-card {
+    margin-left: 1em;
+    margin-right: 1em;
+    padding: 2em;
     display: flex;
-    flex-direction: column;
-    gap: 6em; }
-    .projects .content .project-card {
-      margin-left: 1em;
-      margin-right: 1em;
-      padding: 2em;
-      display: flex;
-      flex-direction: column; }
-      .projects .content .project-card img {
-        width: 100%;
-        height: 10em;
-        object-position: 70% 70%;
-        object-fit: cover; }
-      .projects .content .project-card .title {
-        text-align: left;
-        font-size: 1.5rem;
-        padding: .5em 0 .5em 0; }
-      .projects .content .project-card .desc {
-        font-size: 1rem; }
+    flex-direction: column; }
+    .projects .content .project-card img {
+      width: 100%;
+      height: 10em;
+      object-position: 70% 70%;
+      object-fit: cover; }
+    .projects .content .project-card .title {
+      text-align: center;
+      padding: .5em 0 .5em 0; }
 
 .contact {
   display: flex; }
@@ -184,7 +184,6 @@ div.about {
     justify-content: space-evenly; }
     .contact .textarea .heading {
       text-align: center;
-      font-size: 1.5rem;
       text-transform: uppercase; }
     .contact .textarea .field {
       display: flex;
