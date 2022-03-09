@@ -108,14 +108,14 @@ nav {
     align-items: center;
     justify-content: center; }
 
-.title {
+.card-title {
   display: flex;
   flex-direction: row;
   gap: .5em;
   align-items: center;
   justify-content: center;
   height: auto; }
-  .title .card {
+  .card-title .card {
     display: flex;
     width: 50%;
     height: 100%;
@@ -124,11 +124,11 @@ nav {
     flex-direction: column;
     background-color: #121212;
     justify-content: center; }
-    .title .card .card-text {
+    .card-title .card .card-text {
       text-align: center;
       padding-bottom: 0.5em;
       color: #e7e5e5; }
-    .title .card .card-subtitle {
+    .card-title .card .card-subtitle {
       text-align: center;
       color: #c4c4c4; }
 
