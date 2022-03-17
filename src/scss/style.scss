@@ -19,6 +19,16 @@ body {
     position: relative;
 }
 
+@mixin animate($animation,$duration,$method,$times){
+  animation: $animation $duration $method $times;
+}
+
+@mixin keyframes($name){
+  @keyframes #{$name}{
+      @content;
+  }
+}
+
 nav{
     #logo {
         left: 10px;
@@ -132,23 +142,23 @@ nav{
         clip: rect(0px, 400px, 500px, 0px);
         width: 100%;
         height: 100%;
-        background: url(./static/ceasar-bust.c2bf68cb3b24b5361c95d04c445511a8.png);
+        background: url("https://raw.githubusercontent.com/abhirajranjan/abhirajranjan.github.io/New_Design/static/ceasar-bust.c2bf68cb3b24b5361c95d04c445511a8.png");
         background-repeat: no-repeat;
         background-size: cover;
         position: absolute;
-        animation: float 3s ease infinite;
-        animation: float 3s ease infinite;
+        
+        @include keyframes(float){
+          0% {
+              transform: translateY(-10px); }
+          50% {
+              transform: translateY(20px); }
+          to {
+              transform: translateY(-10px); }
+        }
+      
+        @include animate(float, 3s, ease, infinite);
+      
     }
-
-    @keyframes float {
-        0% {
-          transform: translateY(-10px); }
-        50% {
-          transform: translateY(20px); }
-        to {
-          transform: translateY(-10px); } }
-  
-  
     .hero__grid {
         display: flex;
         flex-direction: column;
