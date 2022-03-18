@@ -6,7 +6,7 @@
 }
 
 html, body {
-    padding: 0em;
+    padding: 0;
     margin: 0;
     width: 100%;
     background-color: var(--hero-bgcolor);
@@ -19,6 +19,11 @@ body {
     position: relative;
 }
 
+*{
+    margin: 0;
+    padding: 0;
+}
+
 @mixin animate($animation,$duration,$method,$times){
   animation: $animation $duration $method $times;
 }
@@ -29,8 +34,43 @@ body {
   }
 }
 
+
+.line {
+    width: 30px;
+    height: 1px;
+    position: relative;
+    background: #000;
+    margin-left: 15px;
+}
+
+.line::before {
+    width: 8px;
+    transform: rotate(-35deg);
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    height: 1px;
+    transform-origin: center right;
+}
+
+.line::after {
+    content: "";
+    width: 8px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    height: 1px;
+    transform-origin: center right;
+    transform: rotate(35deg);
+}
+
 nav{
+    z-index: 999;
     #logo {
+        z-index: 999;
         left: 10px;
         position: fixed;
         top: 10px;
@@ -38,6 +78,7 @@ nav{
     }
 
     .navigation__toggle {
+        z-index: 999;
         right: 10px;
         position: fixed;
         top: 10px;
@@ -82,39 +123,7 @@ nav{
             letter-spacing: .5px;
             position: relative;
             z-index: 1;
-       }
-
-       .line {
-            width: 30px;
-            height: 1px;
-            position: relative;
-            background: #000;
-            margin-left: 15px;
-       }
-      
-       .line::before {
-            width: 8px;
-            transform: rotate(-35deg);
-            content: "";
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            background: #000;
-            height: 1px;
-            transform-origin: center right;
-        }
-
-        .line::after {
-            content: "";
-            width: 8px;
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            background: #000;
-            height: 1px;
-            transform-origin: center right;
-            transform: rotate(35deg);
-        }  
+       }  
     }
     
     .hero__work::before {
@@ -142,7 +151,8 @@ nav{
         clip: rect(0px, 400px, 500px, 0px);
         width: 100%;
         height: 100%;
-        background: url("https://raw.githubusercontent.com/abhirajranjan/abhirajranjan.github.io/New_Design/static/ceasar-bust.c2bf68cb3b24b5361c95d04c445511a8.png");
+        //background: url("https://raw.githubusercontent.com/abhirajranjan/abhirajranjan.github.io/New_Design/static/ceasar-bust.c2bf68cb3b24b5361c95d04c445511a8.png");
+        background: url("../ceasar-bust.c2bf68cb3b24b5361c95d04c445511a8.png");
         background-repeat: no-repeat;
         background-size: cover;
         position: absolute;
@@ -265,6 +275,166 @@ nav{
         }
     }
 }
+
+.project-showcase{
+    margin-top: 5em;
+
+    .heading{
+        padding-left: 2em;
+      
+        h2{
+            font-family: 'Raleway', Arial, Helvetica, sans-serif;
+        }
+
+        p {
+            margin-top: .5em;
+            font-family: "Hubballi";
+            width: 90%;
+            position: relative;
+            display: inline-block;
+            font-size: 1.2rem;
+            color: #474747;
+        }
+    }
+
+    .cards{
+        margin-top: 3em;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        gap: 4em;
+        
+        .card{
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            transform: translate(0px);
+            height: auto;
+
+            .bg{
+                position: relative;
+                order: 1;
+                width: 100%;
+                height: 15rem;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                z-index: 10;
+
+                svg{
+                    width: 350px;
+                    //transform: translateX(20px);
+                    position: absolute;
+                    right: 0;
+                    z-index: 1;
+
+                    image{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .thumbnail-bg{
+                    transform: scaleX(1);
+                    width: 90%;
+                    height: 70%;
+                    bottom:-20%;
+                    right: 25%;
+                    z-index: 0;
+                    transform-origin: right center;
+                    position: absolute;
+                }
+            }
+
+            .container{
+                order: 2;
+                padding: 5rem 0 0.8rem 0;
+                display: flex;
+
+                ._line{
+                    width: 20px;
+                    height: 1px;
+                    background: #d8d8d8;
+                    margin-top: 2rem;
+                    margin-right: 0.5rem;
+                }
+
+                .content{
+                    display: flex;
+
+                    .serialno{
+                        margin-right: 1.2rem;
+                        display: block;
+                        margin-top: 1rem;
+                        font-size: 1.3rem;
+                        color: #8f8e8e;
+                        opacity: .5;
+                    }
+
+                    .title{
+                        h2{
+                            color: #8f8e8e;
+                            margin-bottom: 0;
+                        }
+                        span{
+                            opacity: .8;
+                            color: #8f8e8e;
+                            letter-spacing: 1px;
+                            word-spacing: 2px;
+                            font-size: .8rem;
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+            }
+
+            a{
+                position: relative;
+                right: unset;
+                left: 6rem;
+                order: 3;
+                color: #000;
+                padding: 5px;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                z-index: 10;
+
+                display: inline-flex;
+                align-items: center;
+                font-weight: 700;
+                text-decoration: none;
+            }
+
+            a::before{
+                width: 35px;
+                height: 35px;
+                left: -12px;
+
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+
+                background: #e8e8e8;
+                border-radius: 50%;
+
+                color: #000;
+                font-weight: 700;
+            }
+            .link-text{
+                font-size: 16px;
+                margin-right: 10px;
+                text-transform: uppercase;
+                letter-spacing: .5px;
+                word-spacing: 2px;
+                z-index: 1;
+                position: relative;
+            }
+        }
+    }
+}
 /*
 -----------------------------------------------------------------------------------------------------
 */
@@ -322,7 +492,7 @@ p {
 
 p {
     font-family: Visuelt Pro,Helvetica,Arial,sans-serif;
-    line-height: 4rem;
+    line-height: 2rem;
     margin-top: 0;
     margin-bottom: 1rem;
     font-size: 1.8rem;
