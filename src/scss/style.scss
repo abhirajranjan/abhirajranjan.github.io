@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Hubballi&family=Poppins&family=Raleway&display=swap");
 
+@font-face {
+    font-family: 'getawayregular';
+    //src: url('getaway-webfont.ttf') format('truetype');
+    src: url("/fonts/getaway-webfont.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root {
     --hero-bgcolor: #f8f8f8;
 
@@ -103,6 +111,7 @@ nav{
         letter-spacing: 2px;
         word-spacing: 3px;
         padding-right: 0px;
+        margin-bottom: 0.4em;
     }
     p {
         font-family: "Hubballi";
@@ -111,6 +120,7 @@ nav{
         display: inline-block;
         font-size: 1.2rem;
         color: #474747;
+        margin-bottom: 3em;
     }
     .hero__work {
         color: #000;
@@ -282,13 +292,13 @@ nav{
 }
 
 .project-showcase{
-    margin-top: 5em;
+    margin-top: 6em;
 
     .heading{
         padding-left: 2em;
       
         h2{
-            font-family: 'Raleway', Arial, Helvetica, sans-serif;
+            font-family: 'getaway', Arial, Helvetica, sans-serif;
         }
 
         p {
@@ -307,7 +317,7 @@ nav{
         display: flex;
         flex-direction: column;
         position: relative;
-        gap: 4em;
+        gap: 7em;
         
         .card{
             display: flex;
@@ -353,11 +363,11 @@ nav{
 
             .container{
                 order: 2;
-                padding: 5rem 0 0.8rem 0;
+                padding: 5em 0 2em 0;
                 display: flex;
 
                 ._line{
-                    width: 20px;
+                    width: 15px;
                     height: 1px;
                     background: #d8d8d8;
                     margin-top: 2rem;
@@ -379,6 +389,7 @@ nav{
                     .title{
                         h2{
                             color: #8f8e8e;
+
                             margin-bottom: 0;
                         }
                         span{
@@ -594,17 +605,19 @@ footer{
 
             .name{
                 order: 2;
-
+                margin-bottom: 1.4em;
+                
                 p{
                     font-family: 'Raleway', Arial, Helvetica, sans-serif;
-                    font-size: 0.8rem;
+                    font-size: 1rem;
+                    letter-spacing: 1.2px;
                     font-weight: 700;
                     text-transform: capitalize;
                 }
             }
             a{
                 color: #d8d8d8;
-                font-size: 14px;
+                font-size: 1rem;
                 margin-bottom: 0;
                 padding: 0 15px;
                 position: relative;
@@ -633,11 +646,20 @@ footer{
 }
 
 #circ{
-    width: 300px;
+    width: 100%;
     height: auto;
     position: absolute;
-    left: 9%;
-    transform-origin: left top
+    left: 0px;
+    bottom: 0;
+    transform: translateY(60%);
+    transform-origin: center center;
+
+    .circ{
+        stroke-width: .5px;
+        stroke: #424242;
+        fill: none;
+        stroke-miterlimit: 10;
+    }
 }
 
 /*

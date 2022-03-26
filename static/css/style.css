@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Hubballi&family=Poppins&family=Raleway&display=swap");
+@font-face {
+  font-family: 'getawayregular';
+  src: url("/fonts/getaway-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
 :root {
   --hero-bgcolor: #f8f8f8; }
 
@@ -77,14 +83,16 @@ nav {
     font-size: 2rem;
     letter-spacing: 2px;
     word-spacing: 3px;
-    padding-right: 0px; }
+    padding-right: 0px;
+    margin-bottom: 0.4em; }
   .hero p {
     font-family: "Hubballi";
     width: 90%;
     position: relative;
     display: inline-block;
     font-size: 1.2rem;
-    color: #474747; }
+    color: #474747;
+    margin-bottom: 3em; }
   .hero .hero__work {
     color: #000;
     padding: 5px;
@@ -218,11 +226,11 @@ nav {
         padding: 0; }
 
 .project-showcase {
-  margin-top: 5em; }
+  margin-top: 6em; }
   .project-showcase .heading {
     padding-left: 2em; }
     .project-showcase .heading h2 {
-      font-family: 'Raleway', Arial, Helvetica, sans-serif; }
+      font-family: 'getaway', Arial, Helvetica, sans-serif; }
     .project-showcase .heading p {
       margin-top: .5em;
       font-family: "Hubballi";
@@ -236,7 +244,7 @@ nav {
     display: flex;
     flex-direction: column;
     position: relative;
-    gap: 4em; }
+    gap: 7em; }
     .project-showcase .cards .card {
       display: flex;
       position: relative;
@@ -272,10 +280,10 @@ nav {
           position: absolute; }
       .project-showcase .cards .card .container {
         order: 2;
-        padding: 5rem 0 0.8rem 0;
+        padding: 5em 0 2em 0;
         display: flex; }
         .project-showcase .cards .card .container ._line {
-          width: 20px;
+          width: 15px;
           height: 1px;
           background: #d8d8d8;
           margin-top: 2rem;
@@ -461,15 +469,17 @@ footer {
         margin-bottom: 2em;
         order: 1; }
       footer .footer-wrapper .content .name {
-        order: 2; }
+        order: 2;
+        margin-bottom: 1.4em; }
         footer .footer-wrapper .content .name p {
           font-family: 'Raleway', Arial, Helvetica, sans-serif;
-          font-size: 0.8rem;
+          font-size: 1rem;
+          letter-spacing: 1.2px;
           font-weight: 700;
           text-transform: capitalize; }
       footer .footer-wrapper .content a {
         color: #d8d8d8;
-        font-size: 14px;
+        font-size: 1rem;
         margin-bottom: 0;
         padding: 0 15px;
         position: relative;
@@ -491,11 +501,18 @@ footer {
         background: transparent; }
 
 #circ {
-  width: 300px;
+  width: 100%;
   height: auto;
   position: absolute;
-  left: 9%;
-  transform-origin: left top; }
+  left: 0px;
+  bottom: 0;
+  transform: translateY(60%);
+  transform-origin: center center; }
+  #circ .circ {
+    stroke-width: .5px;
+    stroke: #424242;
+    fill: none;
+    stroke-miterlimit: 10; }
 
 /*
 -----------------------------------------------------------------------------------------------------
