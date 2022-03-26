@@ -1,12 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Hubballi&family=Poppins&family=Raleway&display=swap");
-@font-face {
-  font-family: 'getawayregular';
-  src: url("/fonts/getaway-webfont.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-
 :root {
-  --hero-bgcolor: #f8f8f8; }
+  --hero-bgcolor: #f8f8f8;
+  --heading-font: 'Raleway', sans-serif;
+  --primary-font: 'Comfortaa', cursive, Helvetica,Arial,sans-serif;
+  --secondary-font: 'Comfortaa', sans-serif; }
 
 html, body {
   padding: 0;
@@ -16,7 +12,7 @@ html, body {
   background-color: var(--hero-bgcolor); }
 
 body {
-  font-family: "Poppins",Helvetica,Arial,sans-serif;
+  font-family: var(--secondary-font);
   line-height: 1.5;
   font-size: 1.2rem;
   position: relative; }
@@ -78,7 +74,7 @@ nav {
   height: auto;
   position: relative; }
   .hero h1 {
-    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+    font-family: var(--heading-font);
     line-height: 4rem;
     font-size: 2rem;
     letter-spacing: 2px;
@@ -86,11 +82,11 @@ nav {
     padding-right: 0px;
     margin-bottom: 0.4em; }
   .hero p {
-    font-family: "Hubballi";
+    font-family: var(--primary-font);
     width: 90%;
     position: relative;
     display: inline-block;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #474747;
     margin-bottom: 3em; }
   .hero .hero__work {
@@ -230,14 +226,13 @@ nav {
   .project-showcase .heading {
     padding-left: 2em; }
     .project-showcase .heading h2 {
-      font-family: 'getaway', Arial, Helvetica, sans-serif; }
+      font-family: var(--primary-font); }
     .project-showcase .heading p {
       margin-top: .5em;
-      font-family: "Hubballi";
+      font-family: var(--primary-font);
       width: 90%;
       position: relative;
       display: inline-block;
-      font-size: 1.2rem;
       color: #474747; }
   .project-showcase .cards {
     margin-top: 3em;
@@ -299,14 +294,12 @@ nav {
             opacity: .5; }
           .project-showcase .cards .card .container .content .title h2 {
             color: #8f8e8e;
+            font-family: var(--primary-font);
             margin-bottom: 0; }
           .project-showcase .cards .card .container .content .title span {
             opacity: .8;
             color: #8f8e8e;
-            letter-spacing: 1px;
-            word-spacing: 2px;
-            font-size: .8rem;
-            text-transform: uppercase; }
+            font-size: 1rem; }
       .project-showcase .cards .card a {
         position: relative;
         right: unset;
@@ -472,7 +465,7 @@ footer {
         order: 2;
         margin-bottom: 1.4em; }
         footer .footer-wrapper .content .name p {
-          font-family: 'Raleway', Arial, Helvetica, sans-serif;
+          font-family: var(--heading-font);
           font-size: 1rem;
           letter-spacing: 1.2px;
           font-weight: 700;
@@ -518,7 +511,7 @@ footer {
 -----------------------------------------------------------------------------------------------------
 */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Poppins",Helvetica,Arial,sans-serif;
+  font-family: var(--secondary-font);
   margin-top: 0;
   margin-bottom: .5rem;
   font-weight: 700;
@@ -527,7 +520,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   line-height: 4rem;
-  font-family: 'Raleway', Arial, Helvetica, sans-serif;
+  font-family: var(--primary-font);
   font-size: 2rem;
   padding-right: 0px; }
 
@@ -536,7 +529,7 @@ h2 {
   letter-spacing: 2px; }
 
 h2 {
-  font-size: 1.5rem; }
+  font-size: 1.2rem; }
 
 h3 {
   font-size: 3rem; }
@@ -560,8 +553,7 @@ p {
   color: #474747; }
 
 p {
-  font-family: Visuelt Pro,Helvetica,Arial,sans-serif;
-  line-height: 2rem;
+  line-height: 1.5rem;
   margin-top: 0;
   margin-bottom: 1rem;
-  font-size: 1.8rem; }
+  font-size: 1rem; }
